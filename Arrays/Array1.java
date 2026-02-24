@@ -1,4 +1,5 @@
 //Array passing as parameters
+
 class Array1 {
     static void update(int x[]){
        for(int i=0; i<x.length; i++){

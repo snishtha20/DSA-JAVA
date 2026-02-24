@@ -78,25 +78,71 @@
 // }
 
 // 3Sum
+// class Practice{
+//     int[] Practice5(int nums[]){
+//         for(int i=0; i<nums.length; i++){
+//             for(int j=i+1; j<nums.length; j++){
+//                 for(int k=j+1; k<nums.length; k++){
+//                     if(nums[i]+nums[j]+nums[k]==0){
+//                         return new int[]{nums[i],nums[j],nums[k]};
+//                     }
+//                 }
+//             }
+//         }
+//         return new int[]{};
+//     }
+//     public static void main(String args[]){
+//         int nums[] = {0};
+//         Practice obj = new Practice();
+//         int a[] = obj.Practice5(nums);
+//         for(int i=0; i<a.length; i++){
+//             System.out.println("[" + a[i] + " ]");
+//         }
+//     }
+// }
+
+
+// kids with Candies
+// class Practice{
+//     public static void main(String args[]){
+//         int candies[] = {2,4,8,1,3};
+//         int max = Integer.MIN_VALUE;
+//         for(int i =0; i<candies.length; i++){
+//             if(max <= candies[i]){
+//                 max = candies[i];
+//             }
+//         }
+//         System.out.println(max);
+//     }
+// }
+
+
 class Practice{
-    int[] Practice5(int nums[]){
-        for(int i=0; i<nums.length; i++){
-            for(int j=i+1; j<nums.length; j++){
-                for(int k=j+1; k<nums.length; k++){
-                    if(nums[i]+nums[j]+nums[k]==0){
-                        return new int[]{nums[i],nums[j],nums[k]};
-                    }
-                }
-            }
-        }
-        return new int[]{};
-    }
     public static void main(String args[]){
-        int nums[] = {0};
-        Practice obj = new Practice();
-        int a[] = obj.Practice5(nums);
+        int nums[] = {2,5,1,3,4,7};
+        int n =3;
+        int x = nums[0];
+        System.out.println("x:" + x);
+        int y = nums[n];
+        System.out.println("y:" +y);
+        int a[] = new int[nums.length];
+        for(int i =0; i<a.length; i++){
+
+            if(i==0 || i%2 == 0){
+                a[i] = x;
+                x = i == n-1 ? nums[i] : nums[i+1];
+                System.out.println("x:" + x);
+                
+            }
+            else{
+                a[i] = y;
+                y = i == nums.length-1 ? nums[nums.length-1] : nums[n+1];
+                System.out.println("y:" +y);
+            }
+           
+        }
         for(int i=0; i<a.length; i++){
-            System.out.println("[" + a[i] + " ]");
+            System.out.print(a[i] + " ");
         }
     }
 }

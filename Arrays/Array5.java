@@ -9,9 +9,7 @@ class Array5{
             nums[last] = a;
             first ++;
             last --;
-        }
-
-        
+        }  
     }
     public static void main(String args[])
     {
