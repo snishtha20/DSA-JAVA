@@ -6,3 +6,4 @@ This repository contains my daily practice of Data Structures & Algorithms using
 ### Platform
 - Apna College
 - LeetCode
+- GeeksForGeeks
